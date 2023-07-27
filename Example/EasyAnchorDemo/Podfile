@@ -6,5 +6,5 @@ target 'EasyAnchorDemo' do
   use_frameworks!
 
   # Pods for EasyAnchorDemo
-  pod 'EasyAnchor'
+  pod 'EasyAnchor', :path => '../..'
 end
