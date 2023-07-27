@@ -17,16 +17,17 @@ class ApplyView: UIView {
             container.addSubview($0)
         }
         
-        activate(
-            container.anchor.edges.insets(8),
-            a.anchor.top.width.right,
-            a.anchor.height.equal.to(60),
-            a.anchor.left.height.apply(to: [b, c]),
-            b.anchor.centerY,
-            b.anchor.width.equal.to(a.anchor).multiplier(0.5),
-            c.anchor.width.equal.to(b.anchor).multiplier(0.5),
+        activate {
+            container.anchor.edges.insets(8)
+            a.anchor.top.width.right
+            a.anchor.height.equal.to(60)
+            a.anchor.left.height.apply(to: [b, c])
+            b.anchor.centerY
+            b.anchor.width.equal.to(a.anchor).multiplier(0.5)
+            c.anchor.width.equal.to(b.anchor).multiplier(0.5)
             c.anchor.bottom
-        )
+        }
+        
         
         animator = Animator(view: self, animations: [
             {

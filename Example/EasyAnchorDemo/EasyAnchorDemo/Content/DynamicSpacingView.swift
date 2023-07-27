@@ -17,16 +17,18 @@ class DynamicSpacingView: UIView {
             container.addSubview($0)
         }
         
-        activate(
-            container.anchor.edges.insets(8),
-            a.anchor.size.equal.to(30),
-            b.anchor.size.equal.to(30),
-            c.anchor.size.equal.to(30),
-            a.anchor.left.centerY,
-            a.anchor.centerY.apply(to: [b, c]),
-            c.anchor.right,
+        
+        activate {
+            container.anchor.edges.insets(8)
+            a.anchor.size.equal.to(30)
+            b.anchor.size.equal.to(30)
+            c.anchor.size.equal.to(30)
+            a.anchor.left.centerY
+            a.anchor.centerY.apply(to: [b, c])
+            c.anchor.right
             a.anchor.dynamicSpacingHorizontally(togetherWith: [b, c])
-        )
+        }
+        
         
         animator = Animator(view: self, animations: [
             {

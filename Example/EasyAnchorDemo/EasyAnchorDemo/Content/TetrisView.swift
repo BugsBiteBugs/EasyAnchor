@@ -52,10 +52,10 @@ class TetrisView: UIView {
             }
             
             view.image = item.image
-            activate(
-                view.anchor.width.multiplier(item.width),
+            activate {
+                view.anchor.width.multiplier(item.width)
                 view.anchor.height.equal.to(view.anchor.width).multiplier(item.ratio)
-            )
+            }
             
             return view
         }
@@ -87,65 +87,68 @@ class TetrisView: UIView {
             {
                 b1.frame.origin.x = self.bounds.size.width / 8 * 0
                 b1.isHidden = false
-                activate(
+                activate {
                     b1.anchor.left.bottom
-                )
+                }
             },
             {
                 b2.frame.origin.x = self.bounds.size.width / 8 * 4
                 b2.isHidden = false
-                activate(
-                    b2.anchor.left.equal.to(b1.anchor.right),
+                activate {
+                    b2.anchor.left.equal.to(b1.anchor.right)
                     b2.anchor.bottom
-                )
+                }
             },
             {
                 b3.frame.origin.x = self.bounds.size.width / 8 * 6
                 b3.isHidden = false
-                activate(
+                activate {
                     b3.anchor.bottom.right
-                )
+                }
             },
             {
                 b4.frame.origin.x = self.bounds.size.width / 8 * 0
                 b4.isHidden = false
-                activate(
-                    b4.anchor.left,
+                activate {
+                    b4.anchor.left
                     b4.anchor.bottom.equal.to(b1.anchor.top)
-                )
+                }
             },
             {
                 b5.frame.origin.x = self.bounds.size.width / 8 * 2
                 b5.transform = CGAffineTransform(rotationAngle: CGFloat(Float.pi * 3))
                 b5.isHidden = false
-                activate(
-                    b5.anchor.bottom.equal.to(b4.anchor.bottom),
+                activate {
+                    b5.anchor.bottom.equal.to(b4.anchor.bottom)
                     b5.anchor.left.equal.to(b4.anchor.right).constant(-self.bounds.size.width / 8 * 1)
-                )
+                }
             },
             {
                 b6.frame.origin.x = self.bounds.size.width / 8 * 5
                 b6.isHidden = false
-                activate(
-                    b6.anchor.right,
+                activate {
+                    b6.anchor.right
                     b6.anchor.bottom.equal.to(b3.anchor.top)
-                )
+                }
+                
             },
             {
                 b7.frame.origin.x = self.bounds.size.width / 8 * 5
                 b7.isHidden = false
-                activate(
-                    b7.anchor.right,
+                activate {
+                    b7.anchor.right
                     b7.anchor.bottom.equal.to(b6.anchor.top).constant(self.bounds.size.width / 8 * 1)
-                )
+                }
+                
             },
             {
                 b8.frame.origin.x = self.bounds.size.width / 8 * 2
                 b8.isHidden = false
-                activate(
-                    b8.anchor.bottom.equal.to(b5.anchor.top),
+                activate {
+                    b8.anchor.bottom.equal.to(b5.anchor.top)
                     b8.anchor.left.equal.to(b5.anchor.left)
-                )
+                }
+                
             }
         ])
         

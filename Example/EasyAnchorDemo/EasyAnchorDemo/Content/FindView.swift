@@ -17,17 +17,17 @@ class FindView: UIView {
             container.addSubview($0)
         }
         
-        activate(
-            container.anchor.center.width,
-            a.anchor.left.right.top,
-            b.anchor.left.right,
-            c.anchor.left.right.bottom,
-            b.anchor.top.equal.to(a.anchor.bottom),
-            c.anchor.top.equal.to(b.anchor.bottom),
-            a.anchor.height.equal.to(30),
-            b.anchor.height.equal.to(30),
+        activate {
+            container.anchor.center.width
+            a.anchor.left.right.top
+            b.anchor.left.right
+            c.anchor.left.right.bottom
+            b.anchor.top.equal.to(a.anchor.bottom)
+            c.anchor.top.equal.to(b.anchor.bottom)
+            a.anchor.height.equal.to(30)
+            b.anchor.height.equal.to(30)
             c.anchor.height.equal.to(30)
-        )
+        }
         
         animator = Animator(view: self, animations: [
             {

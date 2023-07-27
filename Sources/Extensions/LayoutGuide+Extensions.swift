@@ -1,11 +1,11 @@
 #if os(iOS) || os(tvOS)
-  import UIKit
+import UIKit
 #elseif os(OSX)
-  import AppKit
+import AppKit
 #endif
 
 public extension LayoutGuide {
-  var anchor: Anchor {
-    return Anchor(layoutGuide: self)
-  }
+    var anchor: Anchor {
+        return Anchor(layoutGuide: self)
+    }
 }

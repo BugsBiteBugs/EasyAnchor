@@ -1,11 +1,11 @@
 #if os(iOS) || os(tvOS)
-  import UIKit
+import UIKit
 #elseif os(OSX)
-  import AppKit
+import AppKit
 #endif
 
 public extension View {
-  var anchor: Anchor {
-    return Anchor(view: self)
-  }
+    var anchor: Anchor {
+        return Anchor(view: self)
+    }
 }

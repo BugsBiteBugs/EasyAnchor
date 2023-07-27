@@ -1,10 +1,10 @@
 #if os(iOS) || os(tvOS)
-  import UIKit
+import UIKit
 #elseif os(OSX)
-  import AppKit
+import AppKit
 #endif
 
 /// Something that returns constraints
 public protocol ConstraintProducer {
-  func constraints() -> [NSLayoutConstraint]
+    func constraints() -> [NSLayoutConstraint]
 }

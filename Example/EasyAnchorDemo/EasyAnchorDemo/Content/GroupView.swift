@@ -16,10 +16,10 @@ class GroupView: UIView {
         addSubview(container)
         container.addSubview(a)
         
-        EasyAnchor.activate(
-            container.anchor.edges.insets(8),
+        activate {
+            container.anchor.edges.insets(8)
             a.anchor.size.equal.to(60)
-        )
+        }
         
         g1 = group(a.anchor.top.left)
         g2 = group(a.anchor.top.right)

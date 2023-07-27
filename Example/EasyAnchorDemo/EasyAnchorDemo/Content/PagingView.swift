@@ -22,9 +22,9 @@ class PagingView: UIView {
             scrollView.addSubview($0)
         }
         
-        activate(
-            scrollView.anchor.edges.insets(8),
+        activate {
+            scrollView.anchor.edges.insets(8)
             a.anchor.pagingHorizontally(togetherWith: [b, c, d], in: scrollView)
-        )
+        }
     }
 }

@@ -35,28 +35,31 @@ class PianoView: UIView {
             container.addSubview($0)
         }
         
-        activate(
-            container.anchor.left.right.centerY,
+        
+        activate {
+            container.anchor.left.right.centerY
             container.anchor.height.equal.to(container.anchor.width).multiplier(1.8/3)
-        )
+        }
         
-        activate(
-            c.anchor.left,
-            b.anchor.right,
-            c.anchor.top.bottom,
-            c.anchor.top.bottom.width.apply(to: [d, e, f, g, a, b]),
+        activate {
+            c.anchor.left
+            b.anchor.right
+            c.anchor.top.bottom
+            c.anchor.top.bottom.width.apply(to: [d, e, f, g, a, b])
             c.anchor.fixedSpacingHorizontally(togetherWith: [d, e, f, g, a, b], spacing: 0)
-        )
+        }
         
-        activate(
-            cd.anchor.top,
-            cd.anchor.size.equal.to(c.anchor.size).multiplier(2/3),
-            cd.anchor.top.size.apply(to: [de, fg, ga, ab]),
-            cd.anchor.centerX.equal.to(c.anchor.right),
-            de.anchor.centerX.equal.to(d.anchor.right),
-            fg.anchor.centerX.equal.to(f.anchor.right),
-            ga.anchor.centerX.equal.to(g.anchor.right),
+        activate {
+            cd.anchor.top
+            cd.anchor.size.equal.to(c.anchor.size).multiplier(2/3)
+            cd.anchor.top.size.apply(to: [de, fg, ga, ab])
+            cd.anchor.centerX.equal.to(c.anchor.right)
+            de.anchor.centerX.equal.to(d.anchor.right)
+            fg.anchor.centerX.equal.to(f.anchor.right)
+            ga.anchor.centerX.equal.to(g.anchor.right)
             ab.anchor.centerX.equal.to(a.anchor.right)
-        )
+        }
+        
+        
     }
 }

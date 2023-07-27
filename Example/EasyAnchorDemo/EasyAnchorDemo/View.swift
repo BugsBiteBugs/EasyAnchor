@@ -19,7 +19,9 @@ class View: UIView {
         layer.cornerRadius = 8
         
         addSubview(label)
-        activate(label.anchor.center)
+        activate {
+            label.anchor.center
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
