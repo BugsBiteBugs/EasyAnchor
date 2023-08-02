@@ -21,5 +21,5 @@ Pod::Spec.new do |s|
   s.ios.frameworks = 'UIKit', 'Foundation'
   s.osx.frameworks = 'Cocoa', 'Foundation'
 
-  s.swift_version = '5.1'
+  s.swift_version = '5.4'
 end

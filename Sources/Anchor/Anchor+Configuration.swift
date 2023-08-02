@@ -10,7 +10,6 @@ public extension Anchor {
         pins.forEach {
             $0.constant = value
         }
-        
         return self
     }
     
