@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   }
   s.social_media_url = 'https://twitter.com/onmyway133'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '11.0'
   s.osx.deployment_target = '10.11'
   s.tvos.deployment_target = '9.2'
 
@@ -21,5 +21,5 @@ Pod::Spec.new do |s|
   s.ios.frameworks = 'UIKit', 'Foundation'
   s.osx.frameworks = 'Cocoa', 'Foundation'
 
-  s.swift_version = '5.4'
+  s.swift_version = '5.7'
 end
