@@ -5,7 +5,6 @@ import AppKit
 #endif
 
 public extension Anchor {
-    
     func constant(_ value: CGFloat) -> Self {
         pins.forEach {
             $0.constant = value
@@ -31,5 +30,11 @@ public extension Anchor {
     func ref(_ block: @escaping ([NSLayoutConstraint]) -> Void) -> Self {
         referenceBlock = block
         return self
+    }
+}
+
+public extension Anchor {
+    func offset(_ value: CGFloat) -> Self {
+        return constant(value)
     }
 }
