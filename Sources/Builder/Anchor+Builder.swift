@@ -46,3 +46,50 @@ public extension Anchor {
         return Builder.DynamicSpacingHorizontally(views: array)
     }
 }
+
+
+public extension Anchor {
+    func distribute(views: [View],
+                    itemWidth: CGFloat,
+                    itemHeight: CGFloat,
+                    fixedRowSpacing: CGFloat,
+                    fixedColumnSpacing: CGFloat,
+                    warpCount: Int,
+                    augmentWhenInsufficient: Bool = false,
+                    topPadding: CGFloat,
+                    bottomPadding: CGFloat,
+                    leadingPadding: CGFloat,
+                    trailingPadding: CGFloat) -> Builder.Sudoku {
+        return Builder.Sudoku(container: (item as! View),
+                              views: views,
+                              itemWidth: itemWidth,
+                              itemHeight: itemHeight,
+                              fixedColumnSpacing: fixedColumnSpacing,
+                              fixedRowSpacing: fixedRowSpacing,
+                              warpCount: warpCount,
+                              augmentWhenInsufficient: augmentWhenInsufficient,
+                              topPadding: topPadding,
+                              bottomPadding: bottomPadding,
+                              leadingPadding: leadingPadding,
+                              trailingPadding: trailingPadding)
+    }
+    
+    func distribute(views: [View],
+                    fixedItemWidth: CGFloat,
+                    fixedItemHeight: CGFloat,
+                    warpCount: Int,
+                    topPadding: CGFloat,
+                    bottomPadding: CGFloat,
+                    leadingPadding: CGFloat,
+                    trailingPadding: CGFloat) -> Builder.Sudoku_dynamicSpacing {
+        return Builder.Sudoku_dynamicSpacing(container: (item as! View),
+                                             views: views,
+                                             fixedItemWidth: fixedItemWidth,
+                                             fixedItemHeight: fixedItemHeight,
+                                             warpCount: warpCount,
+                                             topPadding: topPadding,
+                                             bottomPadding: bottomPadding,
+                                             leadingPadding: leadingPadding,
+                                             trailingPadding: trailingPadding)
+    }
+}
