@@ -36,8 +36,8 @@ public extension Builder {
             self.views = views
             self.itemWidth = itemWidth
             self.itemHeight = itemHeight
-            self.fixedRowSpacing = fixedRowSpacing
             self.fixedColumnSpacing = fixedColumnSpacing
+            self.fixedRowSpacing = fixedRowSpacing
             self.warpCount = warpCount
             self.augmentWhenInsufficient = augmentWhenInsufficient
             self.topPadding = topPadding
